@@ -1,47 +1,142 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Student Success Hub</title>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Student Success Hub</title>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="resources.html">Resources</a></li>
-<li><a href="images.html">Images</a></li>
-</ul>
-</nav>
-<header>
-<h1>Student Success Hub</h1>
-<p>Helping college students stay organized and productive.</p>
-</header>
-<section>
-<h2>Welcome</h2>
-<p>
-College students often juggle multiple responsibilities such as classes,
-homework, jobs, and social activities. Because of these commitments,
-time management becomes an essential skill for success. This website
-was created to help students learn strategies for organization,
-productivity, and balance during their academic journey.
-</p>
-<p>
-Our goal is to provide practical advice and helpful tools that students
-can apply to their everyday routines. From study schedules to digital
-productivity apps, these resources are designed to reduce stress and
-improve focus. When students develop strong habits and planning
-strategies, they are better prepared to reach their academic goals.
-</p>
-<img src="images/study.jpg" class="main-img" alt="students studying">
-<button onclick="showMessage()">Click for a Study Tip</button>
-</section>
-<footer>
-<p>Contact us: studentsuccess@email.com | Phone: 555-123-4567</p>
-<p>Oxford, Ohio</p>
-</footer>
+
+    <!-- NAVBAR -->
+    <nav class="indigo darken-3">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">Student Success Hub</a>
+
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="images.html">Images</a></li>
+                <li><a href="materialize.html">Materialize</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+    </ul>
+
+
+    <header class="container section">
+        <h1>Student Success Hub</h1>
+        <p><b>Helping college students stay organized, productive, and balanced.</b></p>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Welcome to Student Success Hub</h2>
+
+            <p>
+                College life can be exciting but also overwhelming. Between classes,
+                assignments, jobs, and social life, many students struggle to stay
+                organized and manage their time effectively. This website was created
+                to provide helpful resources and strategies that students can use to
+                improve productivity and maintain a balanced lifestyle. By learning
+                better planning habits and organization techniques, students can
+                reduce stress and focus more on achieving their academic goals.
+            </p>
+
+            <p>
+                On this site you will find useful information about time management,
+                productivity tips, and tools that can help you stay on top of your
+                schedule. Many students face similar challenges such as procrastination,
+                missed deadlines, and lack of motivation. With the right strategies and
+                resources, these problems can be managed effectively. Our goal is to
+                provide simple and practical solutions that students can easily apply
+                in their daily routines to improve academic success.
+            </p>
+        </section>
+
+        <aside class="card-panel grey lighten-4">
+            <h3>Top Productivity Tips</h3>
+            <ul>
+                <li>Plan your day the night before</li>
+                <li>Break large assignments into smaller tasks</li>
+                <li>Limit distractions while studying</li>
+                <li>Use a planner or digital calendar</li>
+            </ul>
+        </aside>
+
+        <section>
+            <h2>Weekly Study Schedule Example</h2>
+
+            <table class="striped">
+                <tr>
+                    <th>Day</th>
+                    <th>Task</th>
+                    <th>Hours</th>
+                </tr>
+
+                <tr>
+                    <td>Monday</td>
+                    <td>Homework and Reading</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Group Study</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>Review Notes</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer class="page-footer indigo darken-3">
+        <div class="container center">
+            <p><i>Student Success Hub | Web Design Project</i></p>
+        </div>
+    </footer>
+
+
+    <!-- Materialize JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Initialize Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+    </script>
+
 </body>
+
 </html>
