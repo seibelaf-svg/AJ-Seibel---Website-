@@ -260,4 +260,313 @@
   </script>
 
 </body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materialize JS | Student Success Hub</title>
+
+  <!-- Materialize CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="grey lighten-4">
+
+  <!-- NAVBAR -->
+  <nav class="indigo darken-3">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Student Success Hub</a>
+
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li class="active"><a href="materialize.html">Materialize</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="images.html">Images</a></li>
+    <li><a href="materialize.html">Materialize</a></li>
+  </ul>
+
+
+  <!-- HERO SECTION -->
+  <div class="section indigo lighten-5">
+    <div class="container center">
+      <h2 class="indigo-text text-darken-3">Materialize JS Components</h2>
+      <p class="flow-text grey-text text-darken-2">
+        This page demonstrates JavaScript interactions using Materialize including a carousel,
+        collapsible sections, and form-based JS feedback.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="container section">
+
+    <!-- JS RADIO BUTTON INTERACTION -->
+    <h4 class="indigo-text text-darken-3">Study Preference (JS Interaction)</h4>
+    <p>Select how you prefer to study, then click the button to see a message.</p>
+
+    <form id="studyForm">
+      <p>
+        <label>
+          <input name="studyStyle" type="radio" value="Flashcards" />
+          <span>Flashcards</span>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input name="studyStyle" type="radio" value="Watching Videos" />
+          <span>Watching Videos</span>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input name="studyStyle" type="radio" value="Reading Notes" />
+          <span>Reading Notes</span>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input name="studyStyle" type="radio" value="Group Study" />
+          <span>Group Study</span>
+        </label>
+      </p>
+
+      <button type="button" id="studyBtn" class="btn indigo darken-3 waves-effect waves-light">
+        Submit Choice
+        <i class="material-icons right">check</i>
+      </button>
+    </form>
+
+    <div class="card-panel teal lighten-5" style="margin-top: 20px;">
+      <span id="studyResult" class="teal-text text-darken-4">
+        Your result will appear here.
+      </span>
+    </div>
+
+
+    <!-- SUBSCRIBE INTERACTION -->
+    <h4 class="indigo-text text-darken-3">Subscribe to Mailing List (JS Interaction)</h4>
+    <p>Enter your email and click subscribe.</p>
+
+    <div class="row">
+      <form class="col s12" id="subscribeForm">
+        <div class="row">
+          <div class="input-field col s12 m8">
+            <input id="email" type="email" class="validate" required>
+            <label for="email">Email Address</label>
+          </div>
+
+          <div class="input-field col s12 m4">
+            <button type="button" id="subscribeBtn"
+              class="btn-large indigo darken-3 waves-effect waves-light" style="width: 100%;">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="card-panel green lighten-5">
+      <span id="subscribeMessage" class="green-text text-darken-3">
+        Subscription message will appear here.
+      </span>
+    </div>
+
+
+    <!-- BASIC CAROUSEL -->
+    <h4 class="indigo-text text-darken-3 center">Basic Carousel</h4>
+    <p class="center">A simple carousel using Materialize JS.</p>
+
+    <div class="carousel">
+      <a class="carousel-item" href="#one!">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+          alt="Teamwork">
+      </a>
+      <a class="carousel-item" href="#two!">
+        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80"
+          alt="Planner">
+      </a>
+      <a class="carousel-item" href="#three!">
+        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80"
+          alt="Checklist">
+      </a>
+      <a class="carousel-item" href="#four!">
+        <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80"
+          alt="Clock">
+      </a>
+    </div>
+
+
+    <!-- COLLAPSIBLE -->
+    <h4 class="indigo-text text-darken-3">Collapsible Study Tips</h4>
+    <p>Click each section to expand.</p>
+
+    <ul class="collapsible popout">
+      <li class="active">
+        <div class="collapsible-header">
+          <i class="material-icons">schedule</i>Time Blocking
+        </div>
+        <div class="collapsible-body">
+          <span>
+            Time blocking helps you stay productive by assigning specific hours to tasks like studying,
+            working, and breaks.
+          </span>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">check_circle</i>To-Do Lists
+        </div>
+        <div class="collapsible-body">
+          <span>
+            A to-do list keeps you focused. Always prioritize your tasks from most important to least important.
+          </span>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">self_improvement</i>Balance & Breaks
+        </div>
+        <div class="collapsible-body">
+          <span>
+            Taking breaks improves focus. Use the Pomodoro method: 25 minutes studying, 5 minutes break.
+          </span>
+        </div>
+      </li>
+    </ul>
+
+
+    <!-- FULL WIDTH CAROUSEL -->
+    <h4 class="indigo-text text-darken-3 center">Full Width Carousel</h4>
+    <p class="center">A full width slider-style carousel.</p>
+
+    <div class="carousel carousel-slider center">
+      <div class="carousel-fixed-item center">
+        <a class="btn indigo darken-3 waves-effect waves-light">Stay Organized</a>
+      </div>
+
+      <a class="carousel-item" href="#slide1!">
+        <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1400&q=80"
+          alt="Desk workspace">
+      </a>
+
+      <a class="carousel-item" href="#slide2!">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
+          alt="Students working">
+      </a>
+
+      <a class="carousel-item" href="#slide3!">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=80"
+          alt="Reading and studying">
+      </a>
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="page-footer indigo darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Student Success Hub</h5>
+          <p class="grey-text text-lighten-4">
+            This Materialize page demonstrates JavaScript components including a carousel, collapsible menus,
+            and interactive form feedback.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2026 Student Success Hub | Materialize JS Assignment
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- JS INITIALIZATION + CUSTOM INTERACTIONS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // sidenav
+      var sidenav = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(sidenav);
+
+      // basic carousel
+      var carousels = document.querySelectorAll('.carousel');
+      M.Carousel.init(carousels);
+
+      // full width carousel
+      var fullCarousel = document.querySelectorAll('.carousel.carousel-slider');
+      M.Carousel.init(fullCarousel, {
+        fullWidth: true,
+        indicators: true
+      });
+
+      // collapsible
+      var collapsibles = document.querySelectorAll('.collapsible');
+      M.Collapsible.init(collapsibles);
+
+    });
+
+
+    // RADIO BUTTON INTERACTION
+    document.getElementById("studyBtn").addEventListener("click", function () {
+      let selected = document.querySelector('input[name="studyStyle"]:checked');
+      let output = document.getElementById("studyResult");
+
+      if (selected) {
+        output.textContent = "Great choice! Your preferred study style is: " + selected.value + ".";
+      } else {
+        output.textContent = "Please select a study style before submitting.";
+      }
+    });
+
+
+    // SUBSCRIBE BUTTON INTERACTION
+    document.getElementById("subscribeBtn").addEventListener("click", function () {
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("subscribeMessage");
+
+      if (email === "") {
+        message.textContent = "Please enter an email address before subscribing.";
+      } else {
+        message.textContent = "Thank you for subscribing! Updates will be sent to: " + email;
+        document.getElementById("email").value = "";
+      }
+    });
+  </script>
+
+</body>
+
 </html>
