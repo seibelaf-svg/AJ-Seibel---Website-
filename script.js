@@ -10,3 +10,4 @@ img.src = "images/study.jpg";
 img.src = "images/tools.jpg";
 }
 }
+<a href="jquery.html">jQuery</a>
